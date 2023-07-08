@@ -545,6 +545,7 @@ button,
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 103px;
+  position: relative;
 }
 @media (max-width: 1199px) {
   .container {

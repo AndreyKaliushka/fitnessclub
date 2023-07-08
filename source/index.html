@@ -11,20 +11,53 @@
     <!-- <link rel="apple-touch-icon" href="img/favicons/apple.png"> 180×180 -->
     <!-- <link rel="manifest" href="manifest.webmanifest"> -->
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="AlumniSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
+    <div class="container">
+      <header class="main-header">
+        <div class="main-header__logo">
+          <a class="main-header__logo-link">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo/logo-large.svg" width="122" height="44">
+              <source media="(max-width: 1999px)" srcset="img/logo/logo-medium.svg" width="82" height="17">
+              <img src="img/logo/logo-small.svg" width="69" height="24" alt="Переход на главную страницу спортзала SyperGym.">
+            </picture>
+          </a>
+        </div>
+        <div class="main-header__phone-number">
+          <a href="tel:8-800-555-55-55">8-800-555-55-55</a>
+        </div>
       </header>
+
       <main>
-        <div class="container"></div>
+        <h1 class="visually-hidden">Главная страница сайта SyperGym</h1>
+
+        <section class="hero-block">
+          <div class="hero-block__description">
+            <p>Тренажёрный зал Групповые занятия Кардио-зона</p>
+          </div>
+          <div class="hero-block__wrapper">
+            <h2 class="hero-block__title">омск</h2>
+            <h3 class=" hero-block__title-description">ФИТНЕС ЦЕНТР</h3>
+            <a class="btn hero-block__button" href="#">Купить абонемент</a>
+          </div>
+          <div class="hero-block__img">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/hero/hero-desktop.webp 1x, img/hero/hero-desktop@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/hero/hero-tablet.webp 1x, img/hero/hero-tablet@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/hero/hero-desktop.jpg 1x, source/img/hero/hero-desktop@2x.jpg 2x">
+              <img src="img/hero/hero-tablet.jpg" srcset="img/hero/hero-tablet@2x.jpg 2x" alt="На фотографии изабражен супер спортсмен.">
+            </picture>
+          </div>
+        </section>
+
+
       </main>
+
       <footer>
-        <div class="container"></div>
       </footer>
     </div>
     <script src="js/vendor.min.js"></script>
