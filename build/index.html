@@ -19,10 +19,10 @@
     <div class="container">
       <header class="main-header">
         <div class="main-header__logo">
-          <a class="main-header__logo-link">
+          <a class="main-header__logo-link" href="index.html">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo/logo-large.svg" width="122" height="44">
-              <source media="(max-width: 1999px)" srcset="img/logo/logo-medium.svg" width="82" height="17">
+              <source media="(min-width: 768px)" srcset="img/logo/logo-medium.svg" width="82" height="17">
               <img src="img/logo/logo-small.svg" width="69" height="24" alt="Переход на главную страницу спортзала SyperGym.">
             </picture>
           </a>
@@ -36,13 +36,19 @@
         <h1 class="visually-hidden">Главная страница сайта SyperGym</h1>
 
         <section class="hero-block">
-          <div class="hero-block__description">
-            <p>Тренажёрный зал Групповые занятия Кардио-зона</p>
-          </div>
-          <div class="hero-block__wrapper">
-            <h2 class="hero-block__title">омск</h2>
-            <h3 class=" hero-block__title-description">ФИТНЕС ЦЕНТР</h3>
-            <a class="btn hero-block__button" href="#">Купить абонемент</a>
+          <div class="hero-block__information-wrapper">
+            <div class="hero-block__description">
+              <p>Тренажёрный зал</p>
+              <p>Групповые занятия</p>
+              <p>Кардио-зона</p>
+            </div>
+            <div class="hero-block__content-wrapper">
+              <h2 class="hero-block__title">омск</h2>
+              <h3 class=" hero-block__title-description">Фитнес центр</h3>
+            </div>
+            <div class="hero-block__button-wrapper">
+              <a class="btn hero-block__button" href="#">Купить абонемент</a>
+            </div>
           </div>
           <div class="hero-block__img">
             <picture>

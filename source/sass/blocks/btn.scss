@@ -1,6 +1,8 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 14px 20px;
+  justify-content: center;
+  text-transform: uppercase;
 
   color: $color-default-white;
 
@@ -21,6 +23,12 @@
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    background-color: $color-default-white;
+    color: rgba(16, 58, 174, 1);
+  }
+
+   @include active {
+    background-color: $color-default-white;
+    color: $color-dark-blue;
   }
 }
