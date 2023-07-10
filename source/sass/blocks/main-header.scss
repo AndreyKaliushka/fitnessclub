@@ -32,11 +32,26 @@
   }
 }
 
+.main-header__logo-link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 
 .main-header__phone-number {
   margin: 0;
   padding: 33px 0;
   margin-left: auto;
+
 
   @include vp-1199 {
     padding: 37px 0;
@@ -53,6 +68,18 @@
   color: $color-default-white;
   font-weight: 600;
   font-size: 28px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @include vp-1199 {
     font-size: 24px;

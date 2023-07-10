@@ -1,0 +1,46 @@
+.social {
+  max-width: 110px;
+  padding-top: 9px;
+
+  @include vp-1199 {
+    padding-top: 10px;
+  }
+}
+
+.social__item {
+  margin-bottom: 11px;
+
+  &:not(:last-child) {
+    margin-right: 11px;
+  }
+}
+
+.social__link {
+  display: inline-block;
+  background-color: $color-default-white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 2px;
+  fill: rgba(3, 10, 26, 1);
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    background-color: rgba(16, 58, 174, 1);
+    fill: $color-default-white;
+  }
+
+  &:focus {
+    background-color: rgba(16, 58, 174, 1);
+    fill: $color-default-white;
+  }
+
+  &:active {
+    fill: $color-default-white;
+    background-color: $color-dark-blue;
+  }
+}
