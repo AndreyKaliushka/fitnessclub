@@ -172,3 +172,8 @@
     display: none;
   }
 }
+
+.hero-block__img img {
+  height: 100%;
+  object-fit: cover;
+}
