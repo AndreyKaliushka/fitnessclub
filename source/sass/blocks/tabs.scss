@@ -1,0 +1,38 @@
+.tabs {
+  max-width: 100%;
+}
+
+.tabs__controls {
+  display: flex;
+}
+
+.tabs__control {
+  cursor: pointer;
+  opacity: 0.5;
+  min-width: auto;
+  justify-content: center;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: none;
+    border-bottom: 2px solid rgba(209, 10, 66, 1);
+  }
+}
+
+.tabs__content {
+  transition: height 0.3s;
+}
+
+.tabs__element {
+  width: 100%;
+}
+
+.tabs--unset .tabs__content {
+  height: 100px;
+}
+
+.tabs--unset .tabs__element {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
