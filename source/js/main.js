@@ -3,6 +3,9 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {playVideo} from './blocks/video';
 import {initTabs} from './blocks/init-tabs';
+import {setSwiper} from './blocks/page-swiper';
+setSwiper();
+
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
