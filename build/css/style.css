@@ -4733,24 +4733,26 @@ button,
   content: "";
   position: absolute;
   top: 19px;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 11px;
   height: 1px;
+  width: 18px;
   background-color: rgb(28, 51, 116);
 }
 @media (max-width: 767px) {
   .faq__accordion-element span::before {
     width: 12px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 .faq__accordion-element span::after {
   content: "";
   position: absolute;
-  top: 15px;
-  left: 9px;
+  top: 19px;
+  left: 11px;
   width: 18px;
   height: 1px;
   background-color: rgb(28, 51, 116);
@@ -4761,6 +4763,8 @@ button,
 @media (max-width: 767px) {
   .faq__accordion-element span::after {
     width: 12px;
+    left: 30%;
+    top: 49%;
   }
 }
 @media (max-width: 767px) {
