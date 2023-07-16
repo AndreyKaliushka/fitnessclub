@@ -76,6 +76,12 @@
   color: $color-default-black;
   text-transform: lowercase;
 
+  &.is-active {
+    opacity: 1;
+    pointer-events: none;
+    border-bottom: 2px solid rgba(209, 10, 66, 1);
+  }
+
   @include vp-1199 {
     font-size: 18px;
   }

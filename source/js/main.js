@@ -4,8 +4,9 @@ import {Form} from './modules/form-validate/form';
 import {playVideo} from './blocks/video';
 import {initTabs} from './blocks/init-tabs';
 import {setSwiper} from './blocks/page-swiper';
-setSwiper();
+import {initAccordions} from './blocks/init-accordion';
 
+setSwiper();
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
@@ -15,6 +16,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 playVideo();
+
+window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
+    initAccordions();
+  });
+});
 
 // ---------------------------------
 

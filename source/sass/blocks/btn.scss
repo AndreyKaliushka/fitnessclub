@@ -21,14 +21,4 @@
 
     pointer-events: none;
   }
-
-  @include hover-focus {
-    background-color: $color-default-white;
-    color: rgba(16, 58, 174, 1);
-  }
-
-   @include active {
-    background-color: $color-default-white;
-    color: $color-dark-blue;
-  }
 }
