@@ -1,0 +1,284 @@
+.sale {
+  padding: 135px 0 100px;
+
+  @include vp-1199 {
+    padding: 95px 0 100px;
+  }
+
+  @include vp-767 {
+    padding: 63px 15px 70px;
+  }
+}
+
+.sale h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 34px;
+  font-family: $ff-alumni;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.62px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    margin-bottom: 41px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    margin-bottom: 42px;
+  }
+}
+
+
+.sale__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include vp-1199 {
+    flex-direction: column;
+  }
+}
+
+.sale__price {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 40px;
+
+  @include vp-1199 {
+    margin: 0;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.sale__price-information {
+  padding: 39px 45px 42px 45px;
+  background-color: rgba(237, 2, 51, 1);
+  color: $color-default-white;
+  max-width: 280px;
+  text-align: start;
+
+  @include vp-767 {
+    max-width: none;
+    text-align: center;
+  }
+}
+
+.sale__price-information span {
+  display: block;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 9px;
+
+  @include vp-767 {
+    margin-bottom: 8px;
+  }
+}
+
+.sale__price-information h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 55px;
+  margin-bottom: 26px;
+
+  @include vp-767 {
+    margin-bottom: 21px;
+  }
+}
+
+.sale__price-information p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  margin-bottom: 186px;
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 28px;
+  }
+}
+
+.sale__price-button {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  color: $color-default-white;
+  border-bottom: 1px solid $color-default-white;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  font-size: 14px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: none;
+    padding: 5px;
+    border: 1px solid;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    border-bottom: 1px solid;
+  }
+}
+
+.sale__price-img {
+  background-color: #ed0233;
+}
+
+.sale__price-img img {
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.sale__offers {
+  @include vp-1199 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.sale__offer {
+  padding: 26px 28px 27px 28px;
+  min-width: 560px;
+  border: 7px solid;
+  border-image: linear-gradient(151deg,#ed0233 0,#003eb7 100%) 1;
+  border-image-slice: 1;
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+
+    @include vp-1199 {
+      margin: 0;
+      margin-right: 30px;
+    }
+
+    @include vp-767 {
+      margin: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include vp-1199 {
+    margin: 0;
+    min-width: auto;
+    width: 324px;
+    padding: 24px 27px 28px 27px;
+    min-height: 211px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    width: auto;
+    min-width: 290px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 36px;
+    padding-bottom: 39px;
+
+  }
+}
+
+.sale__offer-text {
+  margin-bottom: 62px;
+
+  @include vp-1199 {
+    margin: 0;
+  }
+}
+
+.sale__offer-text h3 {
+  margin: 0;
+  padding: 0;
+  color: rgba(28, 51, 116, 1);
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+
+  margin-bottom: 9px;
+}
+
+.sale__offer-text p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+
+  @include vp-1199 {
+    margin: 0;
+  }
+}
+
+.sale__offer-text br {
+  display: none;
+
+  @include vp-1199 {
+    display: block;
+  }
+}
+
+.sale__offer-button {
+  margin: 0;
+  padding: 1px 0;
+  color: rgba(28, 51, 116, 1);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(28, 51, 116, 1);
+
+  @include vp-1199 {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
+  @include vp-767 {
+    align-self: center;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid;
+  }
+
+  &:active {
+    opacity: 1;
+    border: none;
+    border-bottom: 1px solid;
+  }
+}
