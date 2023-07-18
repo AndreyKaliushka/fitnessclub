@@ -1,6 +1,6 @@
 import Swiper from '../vendor/swiper';
 
-const swiperFirst = new Swiper('.trainers__swiper', {
+const swiperTrainers = new Swiper('.trainers__swiper', {
   loop: true,
 
   breakpoints: {
@@ -23,10 +23,21 @@ const swiperFirst = new Swiper('.trainers__swiper', {
   },
 });
 
+const swiperReferences = new Swiper('.references__swiper', {
+  loop: false,
+
+  navigation: {
+    nextEl: '.references__button-next',
+    prevEl: '.references__button-prev',
+  },
+});
+
 const setSwiper = () => {
   if (document.body.contains(document.querySelector('.trainers'))) {
     // eslint-disable-next-line no-unused-expressions
-    swiperFirst;
+    swiperTrainers;
+    // eslint-disable-next-line no-unused-expressions
+    swiperReferences;
   }
 
   return;
