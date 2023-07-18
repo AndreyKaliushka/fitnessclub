@@ -1,0 +1,13 @@
+.contacts {
+  padding: 0;
+  margin: 0;
+}
+
+.contacts__wrapper {
+  display: flex;
+  justify-content: center;
+
+  @include vp-1199 {
+    flex-direction: column;
+  }
+}

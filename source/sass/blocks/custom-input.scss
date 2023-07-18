@@ -3,12 +3,12 @@
   position: relative;
 
   display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
+  // width: 530px;
+  // padding: 14px 0 28px;
 
   @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
-    width: 100%;
+    // padding: 4px 0 48px;
+    // width: 100%;
   }
 
   label {
@@ -17,8 +17,8 @@
     width: 100%;
 
     @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
+      // align-items: flex-start;
+      // flex-direction: column;
     }
 
     input,
@@ -72,40 +72,17 @@
     }
   }
 
-  &.is-invalid {
-    input,
-    textarea {
-      border: 2px solid #ff1553;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
-      }
-    }
-  }
-
-  &.is-valid {
-    input {
-      border: 2px solid #22b259;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
-      }
-    }
-  }
-
   .input-message {
     position: absolute;
-    right: 0;
-    bottom: -5px;
 
     &.is-invalid {
       color: #ff0000;
+      bottom: -33px;
     }
 
     &.is-valid {
       color: #15ab07;
+      bottom: -20px;
     }
   }
 }
