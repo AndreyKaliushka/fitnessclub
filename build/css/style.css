@@ -1481,122 +1481,6 @@ button,
   pointer-events: none;
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  pointer-events: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.modal::-webkit-scrollbar {
-  display: none;
-}
-.modal__wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 60px 40px;
-}
-@media (max-width: 767px) {
-  .modal__wrapper {
-    padding: 60px 16px;
-  }
-}
-.modal__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-.modal__content {
-  position: relative;
-  width: 600px;
-  padding: 40px;
-  background-color: #ffffff;
-}
-@media (max-width: 767px) {
-  .modal__content {
-    width: 100%;
-    padding: 20px;
-  }
-}
-.modal__close-btn {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  background: rgba(255, 255, 255, 0);
-  border: none;
-  cursor: pointer;
-}
-.modal--responsive .modal__content {
-  width: 100%;
-}
-.modal--fit-content .modal__content {
-  width: auto;
-}
-@media (max-width: 767px) {
-  .modal--fit-content .modal__content {
-    width: 100%;
-  }
-}
-.modal--no-scale {
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
-}
-.modal--preload {
-  -webkit-transition: none;
-  transition: none;
-}
-.modal.is-active {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .custom-input,
 .custom-textarea {
   position: relative;
@@ -4772,7 +4656,6 @@ button,
 .faq__accordion {
   margin: 0;
   padding: 0;
-  padding: 33px 0 15px;
   position: relative;
 }
 .faq__accordion::before {
@@ -4791,29 +4674,45 @@ button,
   position: absolute;
   bottom: 0;
 }
-@media (max-width: 767px) {
-  .faq__accordion {
-    padding: 20px 0 21px;
-  }
-}
 
 .faq__accordion-element {
   margin: 0;
   padding: 0;
+  position: relative;
+  padding: 38px 0 30px;
 }
-
 .faq__accordion-element.is-active {
+  padding: 38px 0 25px;
   opacity: 1;
+}
+@media (max-width: 1199px) {
+  .faq__accordion-element {
+    padding: 36px 0 29px;
+  }
+  .faq__accordion-element.is-active {
+    padding: 36px 0 24px;
+  }
+}
+@media (max-width: 767px) {
+  .faq__accordion-element {
+    padding: 20px 0 20px;
+  }
+  .faq__accordion-element.is-active {
+    padding: 20px 0 20px;
+  }
 }
 
 .faq__accordion-button {
   color: #102654;
   padding: 0;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-bottom: 16px;
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .faq__accordion-button:focus {
   outline: none;
@@ -4823,43 +4722,68 @@ button,
 }
 @media (max-width: 1199px) {
   .faq__accordion-button {
-    margin-bottom: 14px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
 }
 @media (max-width: 767px) {
   .faq__accordion-button {
     margin-bottom: 0;
+    width: 32px;
+    height: 32px;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
 }
 
-.faq__accordion-element span {
-  position: absolute;
-  right: 0;
-  top: -7px;
+.faq__accordion-element.is-active .faq__accordion-button {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (max-width: 1199px) {
+  .faq__accordion-element.is-active .faq__accordion-button {
+    top: 49px;
+  }
+}
+@media (max-width: 767px) {
+  .faq__accordion-element.is-active .faq__accordion-button {
+    top: 55px;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.faq__accordion-button span {
   width: 42px;
   height: 42px;
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid rgb(28, 51, 116);
+  position: relative;
 }
-.faq__accordion-element span:disabled {
+.faq__accordion-button span:disabled {
   border: 1px solid rgba(28, 51, 116, 0.3);
 }
-.faq__accordion-element span:hover {
+.faq__accordion-button span:hover {
   background-color: #102654;
 }
-.faq__accordion-element span:focus {
+.faq__accordion-button span:focus {
   outline: none;
   background-color: #102654;
 }
-.faq__accordion-element span:focus-visible {
+.faq__accordion-button span:focus-visible {
   outline: none;
   background-color: #102654;
 }
-.faq__accordion-element span:active {
+.faq__accordion-button span:active {
   background-color: #102654;
 }
-.faq__accordion-element span::before {
+.faq__accordion-button span::before {
   content: "";
   position: absolute;
   top: 19px;
@@ -4869,7 +4793,7 @@ button,
   background-color: rgb(28, 51, 116);
 }
 @media (max-width: 767px) {
-  .faq__accordion-element span::before {
+  .faq__accordion-button span::before {
     width: 12px;
     left: 50%;
     top: 50%;
@@ -4878,7 +4802,7 @@ button,
             transform: translate(-50%, -50%);
   }
 }
-.faq__accordion-element span::after {
+.faq__accordion-button span::after {
   content: "";
   position: absolute;
   top: 19px;
@@ -4891,14 +4815,14 @@ button,
           transform: rotate(90deg);
 }
 @media (max-width: 767px) {
-  .faq__accordion-element span::after {
+  .faq__accordion-button span::after {
     width: 12px;
     left: 30%;
     top: 49%;
   }
 }
 @media (max-width: 767px) {
-  .faq__accordion-element span {
+  .faq__accordion-button span {
     width: 32px;
     height: 32px;
     top: 50%;
@@ -4908,47 +4832,47 @@ button,
   }
 }
 
-.faq__accordion-element span:disabled:before {
+.faq__accordion-button span:disabled:before {
   opacity: 0.3;
 }
 
-.faq__accordion-element span:disabled::after {
+.faq__accordion-button span:disabled::after {
   opacity: 0.3;
 }
 
-.faq__accordion-element span:hover::before {
+.faq__accordion-button span:hover::before {
   background-color: #ffffff;
 }
 
-.faq__accordion-element span:focus:before {
+.faq__accordion-button span:focus:before {
   outline: none;
   background-color: #ffffff;
 }
 
-.faq__accordion-element span:hover::after {
+.faq__accordion-button span:hover::after {
   background-color: #ffffff;
 }
 
-.faq__accordion-element span:focus::after {
+.faq__accordion-button span:focus::after {
   outline: none;
   background-color: #ffffff;
 }
 
-.faq__accordion-element span:focus-visible::after {
+.faq__accordion-button span:focus-visible::after {
   outline: none;
   background-color: #ffffff;
 }
 
-.faq__accordion-element span:focus-visible:before {
+.faq__accordion-button span:focus-visible:before {
   outline: none;
   background-color: #ffffff;
 }
 
-.faq__accordion-element span:active:before {
+.faq__accordion-button span:active:before {
   background-color: #ffffff;
 }
 
-.faq__accordion-element span:active::after {
+.faq__accordion-button span:active::after {
   background-color: #ffffff;
 }
 
@@ -4963,24 +4887,43 @@ button,
   display: none;
 }
 
-.faq__accordion-button h3 {
+.faq__accordion-element h3 {
   margin: 0;
   padding: 0;
   font-size: 24px;
   font-weight: 500;
   text-transform: none;
   text-align: start;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 @media (max-width: 1199px) {
-  .faq__accordion-button h3 {
+  .faq__accordion-element h3 {
     max-width: 537px;
   }
 }
 @media (max-width: 767px) {
-  .faq__accordion-button h3 {
+  .faq__accordion-element h3 {
     font-size: 18px;
     max-width: 238px;
     margin: 0;
+    line-height: 22px;
+  }
+}
+
+.faq__accordion-element.is-active h3 {
+  margin-bottom: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (max-width: 1199px) {
+  .faq__accordion-element.is-active h3 {
+    margin-bottom: 17px;
+  }
+}
+@media (max-width: 767px) {
+  .faq__accordion-element.is-active h3 {
+    margin-bottom: 14px;
   }
 }
 
@@ -4992,7 +4935,6 @@ button,
 .faq__accordion-wrapper p {
   margin: 0;
   padding: 0;
-  margin-bottom: 9px;
   max-width: 670px;
   font-size: 18px;
   font-style: normal;
@@ -5008,7 +4950,6 @@ button,
   .faq__accordion-wrapper p {
     font-size: 16px;
     margin: 0;
-    margin-top: 14px;
   }
 }
 
@@ -5284,9 +5225,15 @@ button,
   width: 100%;
   border-top: 1px solid rgb(116, 129, 156);
 }
+@media (min-width: 1200px) {
+  .promo-contacts {
+    width: 50%;
+  }
+}
 @media (max-width: 1199px) {
   .promo-contacts {
     padding: 60px 163px 70px 133px;
+    max-width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -5504,11 +5451,16 @@ button,
 
 .company-contacts {
   padding: 56px 159px 47px 120px;
-  width: 100%;
+}
+@media (min-width: 1200px) {
+  .company-contacts {
+    width: 50%;
+  }
 }
 @media (max-width: 1199px) {
   .company-contacts {
     padding: 61px 133px 43px 133px;
+    max-width: 100%;
   }
 }
 @media (max-width: 767px) {

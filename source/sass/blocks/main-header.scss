@@ -46,12 +46,10 @@
   }
 }
 
-
 .main-header__phone-number {
   margin: 0;
   padding: 33px 0;
   margin-left: auto;
-
 
   @include vp-1199 {
     padding: 37px 0;
@@ -89,4 +87,3 @@
     font-size: 20px;
   }
 }
-

@@ -1,9 +1,13 @@
 .company-contacts {
   padding: 56px 159px 47px 120px;
-  width: 100%;
+
+  @media (min-width: 1200px) {
+    width: 50%;
+  }
 
   @include vp-1199 {
     padding: 61px 133px 43px 133px;
+    max-width: 100%;
   }
 
   @include vp-767 {

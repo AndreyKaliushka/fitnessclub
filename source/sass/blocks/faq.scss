@@ -150,7 +150,6 @@
 .faq__accordion {
   margin: 0;
   padding: 0;
-  padding: 33px 0 15px;
   position: relative;
 
   &::before {
@@ -172,27 +171,46 @@
       bottom: 0;
     }
   }
-
-  @include vp-767 {
-    padding: 20px 0 21px;
-  }
 }
 
 .faq__accordion-element {
   margin: 0;
   padding: 0;
-}
+  position: relative;
+  padding: 38px 0 30px;
 
-.faq__accordion-element.is-active {
-  opacity: 1;
+  &.is-active {
+    padding: 38px 0 25px;
+    opacity: 1;
+  }
+
+  @include vp-1199 {
+    padding: 36px 0 29px;
+
+    &.is-active {
+      padding: 36px 0 24px;
+    }
+  }
+
+  @include vp-767 {
+    padding: 20px 0 20px;
+
+    &.is-active {
+      padding: 20px 0 20px;
+    }
+  }
 }
 
 .faq__accordion-button {
   color: $color-dark-blue;
   padding: 0;
-  justify-content: flex-start;
-  margin-bottom: 16px;
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  transition: .3s;
 
   &:focus {
     outline: none;
@@ -203,23 +221,40 @@
   }
 
   @include vp-1199 {
-    margin-bottom: 14px;
+    top: 50%;
+    transform: translate(0,-50%);
   }
 
   @include vp-767 {
     margin-bottom: 0;
+    width: 32px;
+    height: 32px;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
   }
 }
 
-.faq__accordion-element span {
-  position: absolute;
-  right: 0;
-  top: -7px;
+.faq__accordion-element.is-active .faq__accordion-button {
+  transition: .3s;
+
+  @include vp-1199 {
+    top: 49px;
+  }
+
+  @include vp-767 {
+    top: 55px;
+    transition: none;
+  }
+}
+
+.faq__accordion-button span {
   width: 42px;
   height: 42px;
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid rgba(28, 51, 116, 1);
+  position: relative;
 
   &:disabled {
     border: 1px solid rgba(28, 51, 116, 0.3);
@@ -285,50 +320,49 @@
   }
 }
 
-.faq__accordion-element span:disabled:before {
+.faq__accordion-button span:disabled:before {
   opacity: 0.3;
 }
 
-.faq__accordion-element span:disabled::after {
+.faq__accordion-button span:disabled::after {
   opacity: 0.3;
 }
 
-.faq__accordion-element span:hover::before {
+.faq__accordion-button span:hover::before {
   background-color: $color-default-white;
 }
 
-.faq__accordion-element span:focus:before {
+.faq__accordion-button span:focus:before {
   outline: none;
   background-color: $color-default-white;
 }
 
-.faq__accordion-element span:hover::after {
+.faq__accordion-button span:hover::after {
   background-color: $color-default-white;
 }
 
-.faq__accordion-element span:focus::after {
+.faq__accordion-button span:focus::after {
   outline: none;
   background-color: $color-default-white;
 }
 
-.faq__accordion-element span:focus-visible::after {
+.faq__accordion-button span:focus-visible::after {
   outline: none;
   background-color: $color-default-white;
 }
 
-.faq__accordion-element span:focus-visible:before {
+.faq__accordion-button span:focus-visible:before {
   outline: none;
   background-color: $color-default-white;
 }
 
-.faq__accordion-element span:active:before {
+.faq__accordion-button span:active:before {
   background-color: $color-default-white;
 }
 
-.faq__accordion-element span:active::after {
+.faq__accordion-button span:active::after {
   background-color: $color-default-white;
 }
-
 
 .faq__accordion-element.is-active span {
   background-color: #1C3374;
@@ -342,13 +376,14 @@
   display: none;
 }
 
-.faq__accordion-button h3 {
+.faq__accordion-element h3 {
   margin: 0;
   padding: 0;
   font-size: 24px;
   font-weight: 500;
   text-transform: none;
   text-align: start;
+  transition: .3s;
 
   @include vp-1199 {
     max-width: 537px;
@@ -358,6 +393,20 @@
     font-size: 18px;
     max-width: 238px;
     margin: 0;
+    line-height: 22px;
+  }
+}
+
+.faq__accordion-element.is-active h3 {
+  margin-bottom: 16px;
+  transition: .3s;
+
+  @include vp-1199 {
+    margin-bottom: 17px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 14px;
   }
 }
 
@@ -369,7 +418,6 @@
 .faq__accordion-wrapper p {
   margin: 0;
   padding: 0;
-  margin-bottom: 9px;
   max-width: 670px;
   font-size: 18px;
   font-style: normal;
@@ -383,7 +431,6 @@
   @include vp-767 {
     font-size: 16px;
     margin: 0;
-    margin-top: 14px;
   }
 }
 
