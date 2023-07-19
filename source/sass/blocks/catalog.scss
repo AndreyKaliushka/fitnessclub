@@ -73,13 +73,36 @@
   padding-top: 20px;
   padding-bottom: 16px;
   font-size: 20px;
-  color: $color-default-black;
+  color: rgba(16, 38, 84, 0.50);
+  opacity: 1;
   text-transform: lowercase;
+
+  &:hover {
+    border-bottom: 2px solid rgba(209, 10, 66, 1);
+    padding-bottom: 14px;
+  }
+
+  &:focus {
+    border-bottom: 2px solid rgba(209, 10, 66, 1);
+    padding-bottom: 14px;
+    outline: none;
+  }
+
+  &:focus-visible {
+    border-bottom: 2px solid rgba(209, 10, 66, 1);
+    padding-bottom: 14px;
+    outline: none;
+  }
+
+  &:active {
+    border-bottom: 2px solid rgba(209, 10, 66, 1);
+    padding-bottom: 14px;
+  }
 
   &.is-active {
     opacity: 1;
     pointer-events: none;
-    border-bottom: 2px solid rgba(209, 10, 66, 1);
+    color: $color-dark-blue;
   }
 
   @include vp-1199 {
@@ -243,18 +266,42 @@
 .catalog__item:focus > .catalog__button {
   background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
   color: $color-default-white;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .catalog__item .catalog__button:hover {
   color: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
 }
 
 .catalog__item .catalog__button:focus {
   color: rgba(255, 255, 255, 0.6);
+  outline: none;
+  background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
+  border: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.catalog__item .catalog__button:focus-visible {
+  color: rgba(255, 255, 255, 0.6);
+  outline: none;
+  background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
+  border: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .catalog__item .catalog__button:active {
   color: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
 }
 
 .catalog__button {

@@ -133,7 +133,7 @@
 }
 
 .gym-block__video-button {
-  background-image: url("../img/sprite/play-icon.svg");
+  background-image: url("../img/svg/play-icon.svg");
   background-repeat: no-repeat;
   background-size: 100px 100px;
   position: absolute;
@@ -149,20 +149,20 @@
 	cursor: pointer;
 
   &:disabled {
-    background-image: url("../img/sprite/play-icon-disabled.svg");
+    background-image: url("../img/svg/play-icon-disabled.svg");
   }
 
   &:hover {
-    background-image: url("../img/sprite/play-icon-hover.svg");
+    background-image: url("../img/svg/play-icon-hover.svg");
   }
 
   &:focus {
-    background-image: url("../img/sprite/play-icon-hover.svg");
+    background-image: url("../img/svg/play-icon-hover.svg");
     outline: none;
   }
 
   &:active {
-    background-image: url("../img/sprite/play-icon-hover.svg");
+    background-image: url("../img/svg/play-icon-hover.svg");
   }
 
   @include vp-1199 {

@@ -90,6 +90,17 @@
     outline: none;
   }
 
+  &:focus-visible {
+    border: 1px solid $color-dark-blue;
+    outline: none;
+  }
+
+  &:active {
+    border: 1px solid $color-dark-blue;
+    background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
+    color: $color-default-white;
+  }
+
   &:not(:last-child) {
     margin-bottom: 10px;
 
@@ -121,6 +132,11 @@
   border: none;
   background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
   color: $color-default-white;
+
+  @media (min-width: 1200px) {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
 }
 
 .faq__tabs-content {
@@ -178,6 +194,14 @@
   margin-bottom: 16px;
   position: relative;
 
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
   @include vp-1199 {
     margin-bottom: 14px;
   }
@@ -197,7 +221,25 @@
   border-radius: 50%;
   border: 1px solid rgba(28, 51, 116, 1);
 
+  &:disabled {
+    border: 1px solid rgba(28, 51, 116, 0.3);
+  }
+
   &:hover {
+    background-color: $color-dark-blue;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $color-dark-blue;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $color-dark-blue;
+  }
+
+  &:active {
     background-color: $color-dark-blue;
   }
 
@@ -243,27 +285,47 @@
   }
 }
 
-.faq__accordion-element span:hover::before{
+.faq__accordion-element span:disabled:before {
+  opacity: 0.3;
+}
+
+.faq__accordion-element span:disabled::after {
+  opacity: 0.3;
+}
+
+.faq__accordion-element span:hover::before {
   background-color: $color-default-white;
 }
 
-.faq__accordion-element span:focus:before{
+.faq__accordion-element span:focus:before {
+  outline: none;
   background-color: $color-default-white;
 }
 
-.faq__accordion-element span:hover::after{
+.faq__accordion-element span:hover::after {
   background-color: $color-default-white;
 }
 
-.faq__accordion-element span:focus::after{
+.faq__accordion-element span:focus::after {
+  outline: none;
   background-color: $color-default-white;
 }
 
-.faq__accordion-element span:active:before{
+.faq__accordion-element span:focus-visible::after {
+  outline: none;
   background-color: $color-default-white;
 }
 
-.faq__accordion-element span:active::after{
+.faq__accordion-element span:focus-visible:before {
+  outline: none;
+  background-color: $color-default-white;
+}
+
+.faq__accordion-element span:active:before {
+  background-color: $color-default-white;
+}
+
+.faq__accordion-element span:active::after {
   background-color: $color-default-white;
 }
 
