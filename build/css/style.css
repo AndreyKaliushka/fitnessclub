@@ -3585,7 +3585,7 @@ button,
   }
 }
 
-.trainers__list-item {
+.trainers__list-advantages li {
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -3593,8 +3593,11 @@ button,
   margin-bottom: 13px;
   line-height: 21px;
   position: relative;
+  margin: 0;
+  padding: 0;
+  max-width: 155px;
 }
-.trainers__list-item::before {
+.trainers__list-advantages li::before {
   content: "";
   position: absolute;
   width: 6px;
@@ -3603,12 +3606,6 @@ button,
   border-radius: 50%;
   left: -16px;
   top: 7px;
-}
-
-.trainers__list-item p {
-  margin: 0;
-  padding: 0;
-  max-width: 155px;
 }
 
 .trainers__button-prev {
