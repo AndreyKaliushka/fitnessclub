@@ -3,7 +3,7 @@
   color: $color-default-white;
 
   @include vp-1199 {
-    padding: 81px 0;
+    padding: 100px 0 81px;
   }
 
   @include vp-767 {
@@ -189,6 +189,10 @@
     letter-spacing: 0.5px;
     border: 2px solid $color-default-white;
   }
+}
+
+.announcement__img {
+  background-color: $color-dark-blue;
 }
 
 .announcement__img img {

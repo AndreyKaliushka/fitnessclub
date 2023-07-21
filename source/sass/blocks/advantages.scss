@@ -1,5 +1,5 @@
 .advantages {
-  padding: 108px 0 130px;
+  padding: 108px 0 127px;
   background-color: rgba(248, 249, 252, 1);
 
   @include vp-1199 {
@@ -56,6 +56,10 @@
   padding-left: 22px;
   grid-column: 1 / 2;
 
+  @media (min-width: 1200px) {
+    border-bottom: 2px solid rgba(209, 10, 66, 0.20);
+  }
+
   @include vp-1199{
     padding: 0;
   }
@@ -68,6 +72,10 @@
 .advantages__content--parking {
   grid-column: 3 / 4;
 
+  @media (min-width: 1200px) {
+    border-bottom: 2px solid rgba(209, 10, 66, 0.20);
+  }
+
   @include vp-1199 {
     grid-column: 2 / 3;
   }
@@ -79,7 +87,7 @@
 
 .advantages__content--place {
   align-items: end;
-  padding-left: 22px;
+  padding-left: 16px;
   grid-column: 1 /2;
 
   @include vp-1199 {

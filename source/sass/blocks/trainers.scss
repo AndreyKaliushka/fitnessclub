@@ -149,6 +149,7 @@
   margin: 0;
   padding: 0;
   max-width: 155px;
+  margin-bottom: 13px;
 
   &::before {
     content: "";
@@ -254,8 +255,6 @@
 }
 
 .trainers__icon-next {
-  transform: rotate(180deg);
-
   @include vp-767 {
     width: 10px;
     height: 19px;

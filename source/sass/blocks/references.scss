@@ -7,7 +7,7 @@
   }
 
   @include vp-767 {
-    padding: 63px 15px 70px;
+    padding: 60px 15px 70px;
   }
 }
 
@@ -70,6 +70,7 @@
   margin-right: 28px;
   max-height: 88px;
   max-width: 88px;
+  background-color: rgba(28, 51, 116, 1);
 
   @include vp-767 {
     margin: 0;
@@ -218,8 +219,6 @@
 }
 
 .references__icon-next {
-  transform: rotate(180deg);
-
   @include vp-767 {
     width: 10px;
     height: 19px;

@@ -6,6 +6,7 @@
 
   @include vp-1199 {
     padding-top: 99px;
+    padding-bottom: 61px;
   }
 
   @include vp-767 {
@@ -41,7 +42,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-bottom: 37px;
+  margin-bottom: 39px;
   width: 25%;
   justify-content: space-between;
 
@@ -58,12 +59,12 @@
 
   @include vp-1199 {
     width: 43%;
-    margin-bottom: 42px;
+    margin-bottom: 44px;
   }
 
   @include vp-767 {
-    width: 80%;
-    margin-bottom: 34px;
+    width: 100%;
+    margin-bottom: 36px;
   }
 }
 
@@ -177,6 +178,7 @@
     padding-top: 49px;
     padding-bottom: 55px;
     min-width: 290px;
+    width: 100%;
   }
 }
 
@@ -327,7 +329,7 @@
   bottom: -150px;
 
   @include vp-1199 {
-    bottom: -105px;
+    bottom: -124px;
   }
 
   @include vp-767 {
