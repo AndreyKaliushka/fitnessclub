@@ -8,11 +8,12 @@
 
   @include vp-767 {
     column-span: all;
+    padding-top: 19px;
   }
 }
 
 .social__item {
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 
   &:not(:last-child) {
     margin-right: 11px;

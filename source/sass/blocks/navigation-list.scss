@@ -10,15 +10,19 @@
   position: relative;
 
   &:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 21px;
 
     @include vp-1199 {
-      margin-right: 30px;
+      margin-right: 11px;
     }
 
     @include vp-767 {
       margin-right: 0;
     }
+  }
+
+  @include vp-767 {
+    margin-left: -10px;
   }
 }
 
@@ -26,13 +30,14 @@
   color: $color-default-white;
   font-size: 14px;
   display: block;
-  padding: 10px 2px;
+  padding: 5px 10px;
   text-align: center;
+  line-height: 22px;
 
   @include vp-767 {
     font-size: 16px;
     padding-top: 7px;
-    padding-bottom: 9px;
+    padding-bottom: 8px;
     text-align: left;
   }
 
@@ -42,21 +47,30 @@
 
   &:hover::after {
     content: "";
-    width: 100%;
+    width: calc(100% - 20px);
     height: 1px;
     background-color: $color-default-white;
     display: block;
     position: absolute;
-    left: 0;
+    left: 10px;
+    bottom: 0;
   }
 
   &:focus {
     outline: none;
     box-shadow: inset 0 0 0 1px $color-default-white;
+
+    &::after {
+      content: none;
+    }
   }
 
   &:focus-visible {
     outline: none;
+
+    &::after {
+      content: none;
+    }
   }
 
   &:active {

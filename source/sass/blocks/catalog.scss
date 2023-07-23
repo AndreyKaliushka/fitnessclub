@@ -2,18 +2,18 @@
   position: relative;
   background-color: rgba(248, 249, 252, 1);
   text-align: center;
-  padding: 120px 0 80px;
+  padding: 121px 0 119px;
 
   @include vp-1199 {
     padding-top: 99px;
-    padding-bottom: 61px;
+    padding-bottom: 60px;
   }
 
   @include vp-767 {
     padding-top: 63px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 35px;
+    padding-bottom: 34px;
   }
 }
 
@@ -25,46 +25,59 @@
   font-weight: 600;
   line-height: normal;
   letter-spacing: 1.62px;
+  margin-bottom: 1px;
 
   @include vp-1199 {
     font-size: 42px;
     margin-bottom: 4px;
+    margin-right: 13px;
   }
 
   @include vp-767 {
     font-size: 32px;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
+    margin-right: 9px;
+    letter-spacing: 1px;
   }
 }
 
 .catalog__tabs-controls {
   position: relative;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
   margin-bottom: 39px;
-  width: 25%;
-  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  width: max-content;
+  max-width: 1160px;
 
   &::after {
     content: "";
     height: 2px;
-    width: 100%;
+    width: calc(100% - 46px);
     background-color: rgba(120, 120, 120, 0.2);
     position: absolute;
     bottom: 0;
     left: 50%;
     translate: -50%;
+
+    @include vp-1199 {
+      width: calc(100% - 54px);
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
   }
 
   @include vp-1199 {
-    width: 43%;
     margin-bottom: 44px;
+    max-width: 768px;
   }
 
   @include vp-767 {
     width: 100%;
-    margin-bottom: 36px;
+    margin-bottom: 35px;
+    justify-content: space-between;
   }
 }
 
@@ -77,27 +90,33 @@
   color: rgba(16, 38, 84, 0.50);
   opacity: 1;
   text-transform: lowercase;
+  margin-left: 23px;
+  margin-right: 23px;
 
   &:hover {
     border-bottom: 2px solid rgba(209, 10, 66, 1);
     padding-bottom: 14px;
+    color: $color-dark-blue;
   }
 
   &:focus {
     border-bottom: 2px solid rgba(209, 10, 66, 1);
     padding-bottom: 14px;
     outline: none;
+    color: $color-dark-blue;
   }
 
   &:focus-visible {
     border-bottom: 2px solid rgba(209, 10, 66, 1);
     padding-bottom: 14px;
     outline: none;
+    color: $color-dark-blue;
   }
 
   &:active {
     border-bottom: 2px solid rgba(209, 10, 66, 1);
     padding-bottom: 14px;
+    color: $color-dark-blue;
   }
 
   &.is-active {
@@ -108,10 +127,13 @@
 
   @include vp-1199 {
     font-size: 18px;
+    margin-left: 27px;
+    margin-right: 27px;
   }
 
   @include vp-767 {
     font-size: 16px;
+    margin: 0;
   }
 }
 
@@ -119,12 +141,16 @@
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
 
   @include vp-1199 {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    gap: unset;
   }
 
   @include vp-767 {
@@ -135,13 +161,10 @@
 .catalog__item {
   padding-top: 62px;
   padding-bottom: 68px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 40px;
-  min-width: 360px;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 360px;
   background-color: $color-default-white;
-  margin-left: 20px;
-  margin-right: 20px;
   text-align: center;
 
   &:hover {
@@ -153,6 +176,8 @@
     @include vp-767 {
       padding-top: 42px;
       padding-bottom: 48px;
+      padding-left: 35px;
+      padding-right: 35px;
     }
   }
 
@@ -165,20 +190,23 @@
     @include vp-767 {
       padding-top: 42px;
       padding-bottom: 48px;
+      padding-left: 35px;
+      padding-right: 35px;
     }
   }
 
   @include vp-1199 {
     min-width: 442px;
+    margin-bottom: 40px;
   }
 
   @include vp-767 {
     margin: 0 auto;
     margin-bottom: 35px;
-    padding-top: 49px;
-    padding-bottom: 55px;
     min-width: 290px;
     width: 100%;
+    padding: 49px 42px 54px;
+    max-width: none;
   }
 }
 
@@ -247,9 +275,11 @@
   font-weight: 700;
   line-height: normal;
   margin-right: 15px;
+  color: rgba(16, 58, 174, 1);
 
   @include vp-767 {
     font-size: 48px;
+    margin-right: 9px;
   }
 }
 
@@ -263,6 +293,14 @@
 .catalog__item:hover > .catalog__button {
   background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
   color: $color-default-white;
+  border: none;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @include vp-767 {
+    padding-top: 26px;
+    padding-bottom: 25px;
+  }
 }
 
 .catalog__item:focus > .catalog__button {
@@ -273,36 +311,41 @@
 }
 
 .catalog__item .catalog__button:hover {
-  color: rgba(255, 255, 255, 0.6);
   border: none;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
+  color: $color-default-white;
+
+  @include vp-767 {
+    padding-top: 26px;
+    padding-bottom: 25px;
+  }
 }
 
 .catalog__item .catalog__button:focus {
-  color: rgba(255, 255, 255, 0.6);
   outline: none;
   background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
   border: none;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 26px;
+  padding-bottom: 25px;
+  color: $color-default-white;
 }
 
 .catalog__item .catalog__button:focus-visible {
-  color: rgba(255, 255, 255, 0.6);
+  color: $color-default-white;
   outline: none;
   background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
   border: none;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 26px;
+  padding-bottom: 25px;
 }
 
 .catalog__item .catalog__button:active {
   color: rgba(255, 255, 255, 0.3);
   border: none;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 26px;
+  padding-bottom: 25px;
   background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
 }
 
@@ -314,8 +357,16 @@
   letter-spacing: 0.6px;
   min-width: 206px;
   border: 2px solid $color-dark-blue;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  max-width: 320px;
+
+  @include vp-767 {
+    width: 100%;
+    max-width: none;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 .catalog__tabs-element {

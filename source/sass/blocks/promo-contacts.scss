@@ -1,27 +1,27 @@
 .promo-contacts {
   background-color: $color-dark-blue;
-  padding: 63px 170px 47px 103px;
+  padding: 66px 170px 47px 103px;
   width: 100%;
-  border-top: 1px solid rgba(116, 129, 156, 1);
 
   @media (min-width: 1200px) {
     width: 50%;
+    padding-left: calc(50vw - 580px);
   }
 
   @include vp-1199 {
-    padding: 60px 163px 70px 133px;
+    padding: 61px 163px 70px 133px;
     max-width: 100%;
   }
 
   @include vp-767 {
-    padding: 62px 15px 69px;
+    padding: 64px 15px 71px;
   }
 }
 
 .promo-contacts h2 {
   margin: 0;
   padding: 0;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
   color: $color-default-white;
   font-family: $ff-alumni;
   font-size: 54px;
@@ -46,15 +46,19 @@
 }
 
 .promo-contacts__form-wrapper {
-  display: flex;
   margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
 
-  @include vp-767 {
-    flex-direction: column;
+  @include vp-1199 {
+    column-gap: 60px;
   }
 
   @include vp-767 {
-    margin-bottom: 13px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 11px;
   }
 }
 
@@ -65,18 +69,6 @@
   color: $color-default-white;
   font-size: 14px;
   line-height: normal;
-
-  &:not(:last-child) {
-    margin-right: 30px;
-
-    @include vp-1199 {
-      margin-right: 61px;
-    }
-
-    @include vp-767 {
-      margin-right: 0;
-    }
-  }
 
   @include vp-767 {
     margin-bottom: 28px;
@@ -91,17 +83,9 @@
   font-size: 14px;
   line-height: normal;
   opacity: 1;
-  min-width: 190px;
+  min-width: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(116, 129, 156, 1);
-
-  @include vp-1199 {
-    min-width: 206px;
-  }
-
-  @include vp-767 {
-    min-width: 100%;
-  }
 
   &::placeholder {
     color: $color-default-white;
@@ -124,6 +108,10 @@
     box-shadow: inset 0 0 0 1px $color-default-white;
     outline: none;
     padding: 9px 9px 4px 0;
+
+    &::placeholder {
+      color: transparent;
+    }
   }
 
   &:focus-visible {
@@ -131,6 +119,10 @@
     box-shadow: inset 0 0 0 1px $color-default-white;
     outline: none;
     padding: 9px 9px 4px 0;
+
+    &::placeholder {
+      color: transparent;
+    }
   }
 
   &:active {
@@ -138,6 +130,10 @@
     box-shadow: inset 0 0 0 1px $color-default-white;
     outline: none;
     padding: 9px 9px 4px 0;
+
+    &::placeholder {
+      color: transparent;
+    }
   }
 }
 
@@ -156,9 +152,11 @@
   color: $color-default-white;
   font-size: 14px;
   font-weight: 700;
-  max-height: 52px;
   display: block;
   letter-spacing: 0.7px;
+  user-select: none;
+  cursor: pointer;
+  word-break: break-all;
 
   &:disabled {
     opacity: 0.4;

@@ -1,10 +1,9 @@
 .container {
   width: 100%;
   min-width: 320px;
-  max-width: 1920px;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 110px;
+  padding-bottom: 108px;
 
   @include vp-1199 {
     padding-bottom: 114px;

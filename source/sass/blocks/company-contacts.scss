@@ -1,17 +1,19 @@
 .company-contacts {
-  padding: 56px 159px 47px 120px;
+  padding: 55px 159px 47px 120px;
 
   @media (min-width: 1200px) {
     width: 50%;
+    padding-right: calc(50vw - 580px);
+    border-top: 1px solid rgba(116, 129, 156, 1);
   }
 
   @include vp-1199 {
-    padding: 61px 133px 43px 133px;
+    padding: 61px 133px 41px 133px;
     max-width: 100%;
   }
 
   @include vp-767 {
-    padding: 64px 15px 40px;
+    padding: 64px 15px 54px;
   }
 }
 
@@ -104,11 +106,24 @@
   }
 }
 
+.company-contacts__item a {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  display: block;
+
+  @include vp-1199 {
+    font-size: 18px;
+  }
+}
+
 .company-contacts__item p {
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
   font-size: 14px;
+  display: block;
 
   @include vp-1199 {
     font-size: 18px;
