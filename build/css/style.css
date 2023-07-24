@@ -5299,7 +5299,7 @@ button,
   left: 24%;
   top: 337px;
 }
-@media (max-width: 1253px) {
+@media (max-width: 1300px) {
   .references__button-prev {
     left: 21%;
   }
@@ -5346,7 +5346,7 @@ button,
   right: 24%;
   top: 337px;
 }
-@media (max-width: 1253px) {
+@media (max-width: 1300px) {
   .references__button-next {
     right: 21%;
   }
