@@ -107,7 +107,7 @@
     border: none;
     box-shadow: inset 0 0 0 1px $color-default-white;
     outline: none;
-    padding: 9px 9px 4px 0;
+    padding: 9px 9px 5px 0;
 
     &::placeholder {
       color: transparent;
@@ -118,7 +118,7 @@
     border: none;
     box-shadow: inset 0 0 0 1px $color-default-white;
     outline: none;
-    padding: 9px 9px 4px 0;
+    padding: 9px 9px 5px 0;
 
     &::placeholder {
       color: transparent;
@@ -129,7 +129,7 @@
     border: none;
     box-shadow: inset 0 0 0 1px $color-default-white;
     outline: none;
-    padding: 9px 9px 4px 0;
+    padding: 9px 9px 5px 0;
 
     &::placeholder {
       color: transparent;
@@ -157,6 +157,7 @@
   user-select: none;
   cursor: pointer;
   word-break: break-all;
+  min-height: 52px;
 
   &:disabled {
     opacity: 0.4;

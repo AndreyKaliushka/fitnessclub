@@ -116,6 +116,28 @@
   @include vp-1199 {
     font-size: 18px;
   }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:focus-visible {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .company-contacts__item p {

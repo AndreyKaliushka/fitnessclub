@@ -327,7 +327,7 @@
   outline: none;
   background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
   border: none;
-  padding-top: 26px;
+  padding-top: 25px;
   padding-bottom: 25px;
   color: $color-default-white;
 }
@@ -337,14 +337,14 @@
   outline: none;
   background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
   border: none;
-  padding-top: 26px;
+  padding-top: 25px;
   padding-bottom: 25px;
 }
 
 .catalog__item .catalog__button:active {
   color: rgba(255, 255, 255, 0.3);
   border: none;
-  padding-top: 26px;
+  padding-top: 25px;
   padding-bottom: 25px;
   background: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
 }
@@ -360,6 +360,7 @@
   padding-top: 23px;
   padding-bottom: 23px;
   max-width: 320px;
+  min-height: 64px;
 
   @include vp-767 {
     width: 100%;
