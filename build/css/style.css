@@ -3335,7 +3335,7 @@ button,
 }
 @media (max-width: 767px) {
   .announcement {
-    padding: 70px 15px 62px;
+    padding: 69px 15px 62px;
   }
 }
 
@@ -3385,6 +3385,7 @@ button,
         -ms-flex-align: center;
             align-items: center;
     max-width: none;
+    padding-bottom: 48px;
   }
 }
 
@@ -3910,7 +3911,6 @@ button,
     font-size: 32px;
     letter-spacing: 0.96px;
     margin-bottom: 45px;
-    margin-right: 17px;
   }
 }
 
