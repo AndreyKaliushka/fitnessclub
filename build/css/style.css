@@ -2538,6 +2538,9 @@ button,
 .navigation-list__item a:active {
   color: #ffffff;
 }
+.navigation-list__item a:active::after {
+  content: none;
+}
 
 .social {
   max-width: 110px;
@@ -4457,6 +4460,7 @@ button,
 .sale__price-button:active {
   color: rgb(255, 255, 255);
   border: none;
+  opacity: 1;
 }
 
 .sale__price-img {
@@ -4610,6 +4614,7 @@ button,
 .sale__offer-button:active {
   color: rgb(28, 51, 116);
   border: none;
+  opacity: 1;
 }
 @media (max-width: 1199px) {
   .sale__offer-button {
